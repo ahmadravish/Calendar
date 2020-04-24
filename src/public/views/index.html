@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Calander</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <div class="form">
+    <form action="http://localhost:3000/" method="POST">
+      <p>
+        <h1>Welcome!</h1>
+         <h4>step 1)first sign in with your google account</h4>
+         
+      </p>
+      <p>
+      <a class="button" target="_blank" rel="noopener noreferrer" href="https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=331657485002-lf247pr6qhjhi73alfd1ejl4935tvp9t.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob">Sign In</a>
+      </p> <br><br><p>
+        <h4>step 2)It provides you a secret code</h4>
+         <h4>step 3)Paste that code in the input given below</h4>
+      <h4><label for="token">Paste the code here:</label><input name="token" type="text" placeholder="eg:Jw65AJg05xiOGmkClxhchx"></h4>
+    </p><br>
+      <p>
+      <h4>step 4)Click to get your upcoming events in JSON format</h4>
+      <input type="submit" value="Get my events"></input>
+    </p>
+    </form>
+    <hr>
+    <br>
+    <br>
+    <form action="http://localhost:3000/events" method="POST">
+      <h1> Send Event</h1>
+      <p><h4>1)Input email id whom you want to send event</h4>
+        <label for="attendee email">Attendee email</label>
+      <input type="email" name="to" placeholder="eg:john@example.com"></p>
+      <p><h4>2)Title of your event</h4>
+        <label for="event title">Event Title</label>
+      <input type="text" name="summary" placeholder="eg:TITLE"></p>
+     <p>
+       <h4>3)Body of event</h4>
+       <label for="body">Event body</label>
+      <input type="text" name="description" placeholder="your message"></p> <br>
+      <input type="submit" value="Send Event Invite">
+    </form>
+  </div>
+
+  
+  
+</body>
+</html>
